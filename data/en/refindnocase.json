@@ -27,7 +27,13 @@
 			"description": "",
 			"code": "reFindNoCase(\"E\", \"test 123!\")",
 			"result": "2"
-		}
+		},
+		{
+			"title": "Comparison with the application-level useJavaAsRegexEngine flag",
+			"description": "CF2018+ Show the difference when using Java Regex as the default regex engine.",
+			"code": "writeDump(refindnocase(\"[[:digit:]]\",\"abc 123 DEF 456? this is a $78 line!\"));\nwriteDump(refindnocase(\"\\p{Digit}\",\"abc 123 DEF 456? this is a $78 line!\"));",
+			"result": "5 5 (0 if the flag is off)"
+		}	
 	]
 
 }
